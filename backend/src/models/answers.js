@@ -4,7 +4,7 @@ const answerSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Types.ObjectId, ref: "User", required: true },
     questionId: { type: mongoose.Types.ObjectId, ref: "Questions", required: true },
-    selectedAnswer: { type: String, required: true },
+    selectedAnswer: [{ type: String, required: true }],
     correct: { type: Boolean, required: true },
   },
   { collection: "answers" }
